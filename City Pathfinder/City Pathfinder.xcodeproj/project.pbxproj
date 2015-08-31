@@ -16,6 +16,10 @@
 		0DE10C851B94A57700A5519F /* City_PathfinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE10C841B94A57700A5519F /* City_PathfinderTests.swift */; };
 		0DE10C901B94A57700A5519F /* City_PathfinderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE10C8F1B94A57700A5519F /* City_PathfinderUITests.swift */; };
 		0DE10C9E1B94AB5800A5519F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DE10C9D1B94AB5800A5519F /* MapKit.framework */; };
+		0DE10CA31B94B39400A5519F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DE10CA21B94B39400A5519F /* CoreGraphics.framework */; };
+		0DE10CA51B94B39C00A5519F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DE10CA41B94B39C00A5519F /* AVFoundation.framework */; };
+		0DE10CA71B94B3AF00A5519F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DE10CA61B94B3AF00A5519F /* QuartzCore.framework */; };
+		0DE10CA91B94BBD700A5519F /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DE10CA81B94BBD700A5519F /* opencv2.framework */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,10 @@
 		0DE10C8F1B94A57700A5519F /* City_PathfinderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City_PathfinderUITests.swift; sourceTree = "<group>"; };
 		0DE10C911B94A57700A5519F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0DE10C9D1B94AB5800A5519F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		0DE10CA21B94B39400A5519F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		0DE10CA41B94B39C00A5519F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		0DE10CA61B94B3AF00A5519F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		0DE10CA81B94BBD700A5519F /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = opencv2.framework; path = Frameworks/opencv2.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +66,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DE10CA71B94B3AF00A5519F /* QuartzCore.framework in Frameworks */,
+				0DE10CA51B94B39C00A5519F /* AVFoundation.framework in Frameworks */,
+				0DE10CA31B94B39400A5519F /* CoreGraphics.framework in Frameworks */,
+				0DE10CA91B94BBD700A5519F /* opencv2.framework in Frameworks */,
 				0DE10C9E1B94AB5800A5519F /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,6 +147,10 @@
 		0DE10C9F1B94ACDC00A5519F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0DE10CA81B94BBD700A5519F /* opencv2.framework */,
+				0DE10CA61B94B3AF00A5519F /* QuartzCore.framework */,
+				0DE10CA41B94B39C00A5519F /* AVFoundation.framework */,
+				0DE10CA21B94B39400A5519F /* CoreGraphics.framework */,
 				0DE10C9D1B94AB5800A5519F /* MapKit.framework */,
 			);
 			name = Frameworks;
@@ -417,6 +433,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = "City Pathfinder/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "vn.ooops.City-Pathfinder";
@@ -428,6 +448,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = "City Pathfinder/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "vn.ooops.City-Pathfinder";
