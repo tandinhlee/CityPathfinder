@@ -82,7 +82,7 @@
 		0DE10C611B94A57600A5519F = {
 			isa = PBXGroup;
 			children = (
-				0DE10C9D1B94AB5800A5519F /* MapKit.framework */,
+				0DE10C9F1B94ACDC00A5519F /* Frameworks */,
 				0DE10C6C1B94A57600A5519F /* City Pathfinder */,
 				0DE10C831B94A57700A5519F /* City PathfinderTests */,
 				0DE10C8E1B94A57700A5519F /* City PathfinderUITests */,
@@ -130,6 +130,14 @@
 				0DE10C911B94A57700A5519F /* Info.plist */,
 			);
 			path = "City PathfinderUITests";
+			sourceTree = "<group>";
+		};
+		0DE10C9F1B94ACDC00A5519F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0DE10C9D1B94AB5800A5519F /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
