@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0DB500A41B98901E009A38D0 /* UIImage+OpenCV.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0DB500A31B98901E009A38D0 /* UIImage+OpenCV.mm */; settings = {ASSET_TAGS = (); }; };
 		0DE10C6E1B94A57600A5519F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE10C6D1B94A57600A5519F /* AppDelegate.swift */; };
 		0DE10C701B94A57600A5519F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE10C6F1B94A57600A5519F /* MapViewController.swift */; };
 		0DE10C721B94A57600A5519F /* FunctionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE10C711B94A57600A5519F /* FunctionViewController.swift */; };
@@ -40,6 +41,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0DB500A11B98901D009A38D0 /* City Pathfinder-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "City Pathfinder-Bridging-Header.h"; sourceTree = "<group>"; };
+		0DB500A21B98901E009A38D0 /* UIImage+OpenCV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+OpenCV.h"; sourceTree = "<group>"; };
+		0DB500A31B98901E009A38D0 /* UIImage+OpenCV.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "UIImage+OpenCV.mm"; sourceTree = "<group>"; };
 		0DE10C6A1B94A57600A5519F /* City Pathfinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "City Pathfinder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DE10C6D1B94A57600A5519F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0DE10C6F1B94A57600A5519F /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -91,6 +95,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0DB500A01B988FD4009A38D0 /* Wrappers */ = {
+			isa = PBXGroup;
+			children = (
+				0DB500A21B98901E009A38D0 /* UIImage+OpenCV.h */,
+				0DB500A31B98901E009A38D0 /* UIImage+OpenCV.mm */,
+			);
+			name = Wrappers;
+			sourceTree = "<group>";
+		};
 		0DE10C611B94A57600A5519F = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +128,8 @@
 		0DE10C6C1B94A57600A5519F /* City Pathfinder */ = {
 			isa = PBXGroup;
 			children = (
+				0DB500A11B98901D009A38D0 /* City Pathfinder-Bridging-Header.h */,
+				0DB500A01B988FD4009A38D0 /* Wrappers */,
 				0DE10C6D1B94A57600A5519F /* AppDelegate.swift */,
 				0DE10C6F1B94A57600A5519F /* MapViewController.swift */,
 				0DE10C711B94A57600A5519F /* FunctionViewController.swift */,
@@ -218,6 +233,7 @@
 		0DE10C621B94A57600A5519F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Dinh Le";
 				TargetAttributes = {
@@ -291,6 +307,7 @@
 			files = (
 				0DE10C721B94A57600A5519F /* FunctionViewController.swift in Sources */,
 				0DE10C6E1B94A57600A5519F /* AppDelegate.swift in Sources */,
+				0DB500A41B98901E009A38D0 /* UIImage+OpenCV.mm in Sources */,
 				0DE10C701B94A57600A5519F /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -433,6 +450,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
@@ -441,6 +459,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "vn.ooops.City-Pathfinder";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "City Pathfinder/City Pathfinder-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -448,6 +468,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
@@ -456,6 +477,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "vn.ooops.City-Pathfinder";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "City Pathfinder/City Pathfinder-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -526,6 +548,7 @@
 				0DE10C961B94A57700A5519F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0DE10C971B94A57700A5519F /* Build configuration list for PBXNativeTarget "City PathfinderTests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +557,7 @@
 				0DE10C991B94A57700A5519F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0DE10C9A1B94A57700A5519F /* Build configuration list for PBXNativeTarget "City PathfinderUITests" */ = {
 			isa = XCConfigurationList;
@@ -542,6 +566,7 @@
 				0DE10C9C1B94A57700A5519F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

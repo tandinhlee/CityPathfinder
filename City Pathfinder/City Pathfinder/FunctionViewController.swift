@@ -9,6 +9,9 @@
 import UIKit
 
 class FunctionViewController: UIViewController {
+    
+    @IBOutlet weak var imageViewSource : UIImageView!
+    @IBOutlet weak var imageViewResult : UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +21,10 @@ class FunctionViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func applyButtonTap (obj:AnyObject) {
+        print("ButtonTap")
     }
 
 
