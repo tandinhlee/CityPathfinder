@@ -25,6 +25,8 @@ class FunctionViewController: UIViewController {
     
     @IBAction func applyButtonTap (obj:AnyObject) {
         print("ButtonTap")
+        let sourceImage:UIImage = self.imageViewSource.image!;
+        self.imageViewResult.image = CVWrapper.testProcessImage(sourceImage);
     }
 
 

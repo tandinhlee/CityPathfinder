@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0DB500A41B98901E009A38D0 /* UIImage+OpenCV.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0DB500A31B98901E009A38D0 /* UIImage+OpenCV.mm */; settings = {ASSET_TAGS = (); }; };
+		0DB500A71B98A907009A38D0 /* portrait_eyes_14.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0DB500A61B98A907009A38D0 /* portrait_eyes_14.jpg */; settings = {ASSET_TAGS = (); }; };
+		0DB500AA1B98AF68009A38D0 /* CVWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0DB500A91B98AF68009A38D0 /* CVWrapper.mm */; settings = {ASSET_TAGS = (); }; };
 		0DE10C6E1B94A57600A5519F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE10C6D1B94A57600A5519F /* AppDelegate.swift */; };
 		0DE10C701B94A57600A5519F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE10C6F1B94A57600A5519F /* MapViewController.swift */; };
 		0DE10C721B94A57600A5519F /* FunctionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE10C711B94A57600A5519F /* FunctionViewController.swift */; };
@@ -44,6 +46,9 @@
 		0DB500A11B98901D009A38D0 /* City Pathfinder-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "City Pathfinder-Bridging-Header.h"; sourceTree = "<group>"; };
 		0DB500A21B98901E009A38D0 /* UIImage+OpenCV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+OpenCV.h"; sourceTree = "<group>"; };
 		0DB500A31B98901E009A38D0 /* UIImage+OpenCV.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "UIImage+OpenCV.mm"; sourceTree = "<group>"; };
+		0DB500A61B98A907009A38D0 /* portrait_eyes_14.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = portrait_eyes_14.jpg; path = ../../../../../../Downloads/portrait_eyes_14.jpg; sourceTree = "<group>"; };
+		0DB500A81B98AF68009A38D0 /* CVWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CVWrapper.h; sourceTree = "<group>"; };
+		0DB500A91B98AF68009A38D0 /* CVWrapper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CVWrapper.mm; sourceTree = "<group>"; };
 		0DE10C6A1B94A57600A5519F /* City Pathfinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "City Pathfinder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DE10C6D1B94A57600A5519F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0DE10C6F1B94A57600A5519F /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -100,8 +105,18 @@
 			children = (
 				0DB500A21B98901E009A38D0 /* UIImage+OpenCV.h */,
 				0DB500A31B98901E009A38D0 /* UIImage+OpenCV.mm */,
+				0DB500A81B98AF68009A38D0 /* CVWrapper.h */,
+				0DB500A91B98AF68009A38D0 /* CVWrapper.mm */,
 			);
 			name = Wrappers;
+			sourceTree = "<group>";
+		};
+		0DB500A51B98A8F6009A38D0 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				0DB500A61B98A907009A38D0 /* portrait_eyes_14.jpg */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 		0DE10C611B94A57600A5519F = {
@@ -128,6 +143,7 @@
 		0DE10C6C1B94A57600A5519F /* City Pathfinder */ = {
 			isa = PBXGroup;
 			children = (
+				0DB500A51B98A8F6009A38D0 /* Images */,
 				0DB500A11B98901D009A38D0 /* City Pathfinder-Bridging-Header.h */,
 				0DB500A01B988FD4009A38D0 /* Wrappers */,
 				0DE10C6D1B94A57600A5519F /* AppDelegate.swift */,
@@ -279,6 +295,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DE10C7A1B94A57600A5519F /* LaunchScreen.storyboard in Resources */,
+				0DB500A71B98A907009A38D0 /* portrait_eyes_14.jpg in Resources */,
 				0DE10C771B94A57600A5519F /* Assets.xcassets in Resources */,
 				0DE10C751B94A57600A5519F /* Main.storyboard in Resources */,
 			);
@@ -307,6 +324,7 @@
 			files = (
 				0DE10C721B94A57600A5519F /* FunctionViewController.swift in Sources */,
 				0DE10C6E1B94A57600A5519F /* AppDelegate.swift in Sources */,
+				0DB500AA1B98AF68009A38D0 /* CVWrapper.mm in Sources */,
 				0DB500A41B98901E009A38D0 /* UIImage+OpenCV.mm in Sources */,
 				0DE10C701B94A57600A5519F /* MapViewController.swift in Sources */,
 			);
