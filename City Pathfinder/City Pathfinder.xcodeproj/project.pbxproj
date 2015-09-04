@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0DB500A41B98901E009A38D0 /* UIImage+OpenCV.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0DB500A31B98901E009A38D0 /* UIImage+OpenCV.mm */; settings = {ASSET_TAGS = (); }; };
-		0DB500A71B98A907009A38D0 /* portrait_eyes_14.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0DB500A61B98A907009A38D0 /* portrait_eyes_14.jpg */; settings = {ASSET_TAGS = (); }; };
 		0DB500AA1B98AF68009A38D0 /* CVWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0DB500A91B98AF68009A38D0 /* CVWrapper.mm */; settings = {ASSET_TAGS = (); }; };
 		0DE10C6E1B94A57600A5519F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE10C6D1B94A57600A5519F /* AppDelegate.swift */; };
 		0DE10C701B94A57600A5519F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE10C6F1B94A57600A5519F /* MapViewController.swift */; };
@@ -23,6 +22,7 @@
 		0DE10CA51B94B39C00A5519F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DE10CA41B94B39C00A5519F /* AVFoundation.framework */; };
 		0DE10CA71B94B3AF00A5519F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DE10CA61B94B3AF00A5519F /* QuartzCore.framework */; };
 		0DE10CA91B94BBD700A5519F /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DE10CA81B94BBD700A5519F /* opencv2.framework */; settings = {ASSET_TAGS = (); }; };
+		9B8842191B9942FD00D2F141 /* portrait_eyes_14.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9B8842181B9942FD00D2F141 /* portrait_eyes_14.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +46,6 @@
 		0DB500A11B98901D009A38D0 /* City Pathfinder-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "City Pathfinder-Bridging-Header.h"; sourceTree = "<group>"; };
 		0DB500A21B98901E009A38D0 /* UIImage+OpenCV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+OpenCV.h"; sourceTree = "<group>"; };
 		0DB500A31B98901E009A38D0 /* UIImage+OpenCV.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "UIImage+OpenCV.mm"; sourceTree = "<group>"; };
-		0DB500A61B98A907009A38D0 /* portrait_eyes_14.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = portrait_eyes_14.jpg; path = ../../../../../../Downloads/portrait_eyes_14.jpg; sourceTree = "<group>"; };
 		0DB500A81B98AF68009A38D0 /* CVWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CVWrapper.h; sourceTree = "<group>"; };
 		0DB500A91B98AF68009A38D0 /* CVWrapper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CVWrapper.mm; sourceTree = "<group>"; };
 		0DE10C6A1B94A57600A5519F /* City Pathfinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "City Pathfinder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,6 +67,7 @@
 		0DE10CA41B94B39C00A5519F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		0DE10CA61B94B3AF00A5519F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		0DE10CA81B94BBD700A5519F /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = opencv2.framework; path = Frameworks/opencv2.framework; sourceTree = "<group>"; };
+		9B8842181B9942FD00D2F141 /* portrait_eyes_14.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = portrait_eyes_14.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,7 +114,7 @@
 		0DB500A51B98A8F6009A38D0 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				0DB500A61B98A907009A38D0 /* portrait_eyes_14.jpg */,
+				9B8842181B9942FD00D2F141 /* portrait_eyes_14.jpg */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -255,7 +255,7 @@
 				TargetAttributes = {
 					0DE10C691B94A57600A5519F = {
 						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = R4JW62PWHY;
+						DevelopmentTeam = 69328XU5T2;
 					};
 					0DE10C7F1B94A57600A5519F = {
 						CreatedOnToolsVersion = 7.0;
@@ -295,7 +295,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DE10C7A1B94A57600A5519F /* LaunchScreen.storyboard in Resources */,
-				0DB500A71B98A907009A38D0 /* portrait_eyes_14.jpg in Resources */,
+				9B8842191B9942FD00D2F141 /* portrait_eyes_14.jpg in Resources */,
 				0DE10C771B94A57600A5519F /* Assets.xcassets in Resources */,
 				0DE10C751B94A57600A5519F /* Main.storyboard in Resources */,
 			);
@@ -469,6 +469,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
@@ -487,6 +489,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
