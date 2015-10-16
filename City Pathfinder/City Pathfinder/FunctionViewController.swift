@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FunctionViewController: UIViewController {
+class FunctionViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate,UIGestureRecognizerDelegate {
     
     @IBOutlet weak var imageViewSource : UIImageView!
     @IBOutlet weak var imageViewResult : UIImageView!
@@ -25,8 +25,21 @@ class FunctionViewController: UIViewController {
     
     @IBAction func applyButtonTap (obj:AnyObject) {
         print("ButtonTap")
-        let sourceImage:UIImage = self.imageViewSource.image!;
-        self.imageViewResult.image = CVWrapper.testProcessImage(sourceImage);
+        let sourceImage:UIImage = self.imageViewSource.image!
+        self.imageViewResult.image = CVWrapper.testProcessImage(sourceImage)
+    }
+    
+    @IBAction func changeImage(obj:AnyObject){
+        let photoPicker = UIImagePickerController()
+        photoPicker.delegate=self
+        photoPicker.sourceType = .PhotoLibrary
+        self.presentViewController(photoPicker, animated: true) { () -> Void in
+            
+        }
+    }
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
+        imageViewSource.image = image
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
 
 

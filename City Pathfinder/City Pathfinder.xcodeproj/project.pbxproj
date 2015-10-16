@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D74BE6F1BD15EDB00B9FBB7 /* hogcalculator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0D74BE6D1BD15EDB00B9FBB7 /* hogcalculator.cpp */; settings = {ASSET_TAGS = (); }; };
 		0DB500A41B98901E009A38D0 /* UIImage+OpenCV.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0DB500A31B98901E009A38D0 /* UIImage+OpenCV.mm */; settings = {ASSET_TAGS = (); }; };
 		0DB500AA1B98AF68009A38D0 /* CVWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0DB500A91B98AF68009A38D0 /* CVWrapper.mm */; settings = {ASSET_TAGS = (); }; };
 		0DE10C6E1B94A57600A5519F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE10C6D1B94A57600A5519F /* AppDelegate.swift */; };
@@ -43,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D74BE6D1BD15EDB00B9FBB7 /* hogcalculator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hogcalculator.cpp; sourceTree = "<group>"; };
+		0D74BE6E1BD15EDB00B9FBB7 /* hogcalculator.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = hogcalculator.hpp; sourceTree = "<group>"; };
 		0DB500A11B98901D009A38D0 /* City Pathfinder-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "City Pathfinder-Bridging-Header.h"; sourceTree = "<group>"; };
 		0DB500A21B98901E009A38D0 /* UIImage+OpenCV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+OpenCV.h"; sourceTree = "<group>"; };
 		0DB500A31B98901E009A38D0 /* UIImage+OpenCV.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "UIImage+OpenCV.mm"; sourceTree = "<group>"; };
@@ -100,6 +103,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D74BE6B1BD15E4500B9FBB7 /* ImageCalculations */ = {
+			isa = PBXGroup;
+			children = (
+				0D74BE6D1BD15EDB00B9FBB7 /* hogcalculator.cpp */,
+				0D74BE6E1BD15EDB00B9FBB7 /* hogcalculator.hpp */,
+			);
+			name = ImageCalculations;
+			sourceTree = "<group>";
+		};
 		0DB500A01B988FD4009A38D0 /* Wrappers */ = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +155,7 @@
 		0DE10C6C1B94A57600A5519F /* City Pathfinder */ = {
 			isa = PBXGroup;
 			children = (
+				0D74BE6B1BD15E4500B9FBB7 /* ImageCalculations */,
 				0DB500A51B98A8F6009A38D0 /* Images */,
 				0DB500A11B98901D009A38D0 /* City Pathfinder-Bridging-Header.h */,
 				0DB500A01B988FD4009A38D0 /* Wrappers */,
@@ -326,6 +339,7 @@
 				0DE10C6E1B94A57600A5519F /* AppDelegate.swift in Sources */,
 				0DB500AA1B98AF68009A38D0 /* CVWrapper.mm in Sources */,
 				0DB500A41B98901E009A38D0 /* UIImage+OpenCV.mm in Sources */,
+				0D74BE6F1BD15EDB00B9FBB7 /* hogcalculator.cpp in Sources */,
 				0DE10C701B94A57600A5519F /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

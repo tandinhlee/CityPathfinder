@@ -8,15 +8,17 @@
 
 #import "CVWrapper.h"
 #import "UIImage+OpenCV.h"
+#include "hogcalculator.hpp"
 using namespace cv;
 @implementation CVWrapper
 +(UIImage *) testProcessImage:(UIImage *)sourceImage{
     UIImage *resultImage = nil;
     //Processing here !
     cv::Mat sourceMat = [sourceImage cvMatFromUIImage];
-    cv::Mat greyMat;
-    cv::cvtColor(sourceMat, greyMat, CV_BGR2GRAY);
-    resultImage = [UIImage UIImageFromCVMat:greyMat];
+    cv::Mat desMat = mycalculator(sourceMat);
+    //cv::Mat greyMat;
+    //cv::cvtColor(sourceMat, greyMat, CV_BGR2GRAY);
+    resultImage = [UIImage UIImageFromCVMat:desMat];
     return resultImage;
 }
 @end

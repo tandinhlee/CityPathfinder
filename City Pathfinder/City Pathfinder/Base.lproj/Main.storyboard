@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8187.4" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8151.3"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -19,11 +19,13 @@
                         <subviews>
                             <mapView multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="VLh-NC-Aoa">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <animations/>
                                 <connections>
                                     <outlet property="delegate" destination="9pv-A4-QxB" id="9l2-sF-uMn"/>
                                 </connections>
                             </mapView>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="VLh-NC-Aoa" secondAttribute="trailing" id="0gJ-Dc-R0E"/>
@@ -52,30 +54,49 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="portrait_eyes_14.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="lEA-iX-AJI">
                                 <rect key="frame" x="11" y="20" width="578" height="249"/>
+                                <animations/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="249" id="cYo-BO-ZUb"/>
+                                </constraints>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wO3-ei-398">
+                                <rect key="frame" x="20" y="314" width="569" height="266"/>
+                                <animations/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Wp-Dd-40E">
+                                <rect key="frame" x="20" y="277" width="53" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Change"/>
+                                <connections>
+                                    <action selector="changeImage:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="pYc-fu-6nP"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ou-Jw-PRf">
-                                <rect key="frame" x="280" y="285" width="40" height="30"/>
+                                <rect key="frame" x="549" y="277" width="40" height="30"/>
+                                <animations/>
                                 <state key="normal" title="Apply"/>
                                 <connections>
                                     <action selector="applyButtonTap:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="Mqv-at-fT6"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wO3-ei-398">
-                                <rect key="frame" x="20" y="314" width="569" height="266"/>
-                            </imageView>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="wO3-ei-398" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="08Z-nJ-65g"/>
-                            <constraint firstItem="wO3-ei-398" firstAttribute="top" secondItem="lEA-iX-AJI" secondAttribute="bottom" constant="45" id="6xn-IH-8C7"/>
-                            <constraint firstAttribute="bottom" secondItem="wO3-ei-398" secondAttribute="bottom" constant="20" symbolic="YES" id="Hw6-7c-PpH"/>
-                            <constraint firstItem="lEA-iX-AJI" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="-9" id="bAe-Nq-VAg"/>
-                            <constraint firstItem="6Ou-Jw-PRf" firstAttribute="top" secondItem="lEA-iX-AJI" secondAttribute="bottom" constant="16" id="cgo-xV-GwL"/>
-                            <constraint firstItem="lEA-iX-AJI" firstAttribute="centerX" secondItem="6Ou-Jw-PRf" secondAttribute="centerX" id="chc-7j-ARf"/>
-                            <constraint firstItem="6Ou-Jw-PRf" firstAttribute="centerY" secondItem="QS5-Rx-YEW" secondAttribute="centerY" id="dlC-hi-L8B"/>
-                            <constraint firstItem="wO3-ei-398" firstAttribute="trailing" secondItem="lEA-iX-AJI" secondAttribute="trailing" id="gR1-0B-anx"/>
-                            <constraint firstItem="6Ou-Jw-PRf" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="kvd-M8-sPd"/>
-                            <constraint firstItem="lEA-iX-AJI" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" id="lMF-cy-B0v"/>
+                            <constraint firstAttribute="bottom" secondItem="wO3-ei-398" secondAttribute="bottom" constant="20" symbolic="YES" id="Fi7-SF-7JH"/>
+                            <constraint firstItem="lEA-iX-AJI" firstAttribute="trailing" secondItem="6Ou-Jw-PRf" secondAttribute="trailing" id="GR0-aS-lWl"/>
+                            <constraint firstItem="wO3-ei-398" firstAttribute="top" secondItem="3Wp-Dd-40E" secondAttribute="bottom" constant="7" id="Ij2-N6-K34"/>
+                            <constraint firstItem="3Wp-Dd-40E" firstAttribute="leading" secondItem="wO3-ei-398" secondAttribute="leading" id="QQB-AT-39R"/>
+                            <constraint firstItem="wO3-ei-398" firstAttribute="trailing" secondItem="6Ou-Jw-PRf" secondAttribute="trailing" id="RrJ-fv-Mgb"/>
+                            <constraint firstItem="lEA-iX-AJI" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="-9" id="WQf-cU-EWJ"/>
+                            <constraint firstItem="6Ou-Jw-PRf" firstAttribute="baseline" secondItem="3Wp-Dd-40E" secondAttribute="baseline" id="aB4-g7-XpR"/>
+                            <constraint firstItem="lEA-iX-AJI" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="dOI-VL-Qdy"/>
+                            <constraint firstItem="3Wp-Dd-40E" firstAttribute="top" secondItem="lEA-iX-AJI" secondAttribute="bottom" constant="8" symbolic="YES" id="j2h-VN-aWH"/>
+                            <constraint firstItem="lEA-iX-AJI" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" id="o2N-ce-Xli"/>
+                            <constraint firstItem="3Wp-Dd-40E" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="wIT-HV-n4q"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Functions" image="function" id="cPa-gy-q4n"/>
@@ -96,6 +117,7 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <animations/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
@@ -111,6 +133,6 @@
     <resources>
         <image name="function" width="30" height="30"/>
         <image name="map" width="30" height="30"/>
-        <image name="portrait_eyes_14.jpg" width="600" height="600"/>
+        <image name="portrait_eyes_14.jpg" width="1300" height="871"/>
     </resources>
 </document>
