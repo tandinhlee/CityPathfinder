@@ -10,5 +10,6 @@
 #import <UIKit/UIKit.h>
 
 @interface CVWrapper : NSObject
-+(UIImage *) testProcessImage:(UIImage *)sourceImage;
++(UIImage *) getHistogramRGB:(UIImage *)sourceImage;
++(UIImage *) getHOGVisualization:(UIImage *)sourceImage;
 @end

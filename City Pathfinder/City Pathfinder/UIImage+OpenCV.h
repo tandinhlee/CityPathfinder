@@ -13,5 +13,4 @@ using namespace cv;
 @interface UIImage (OpenCV)
 - (cv::Mat)cvMatFromUIImage;
 + (UIImage *)UIImageFromCVMat:(cv::Mat)cvMat;
-
 @end

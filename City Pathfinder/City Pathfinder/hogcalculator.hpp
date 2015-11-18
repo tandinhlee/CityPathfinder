@@ -17,6 +17,7 @@
 #include <iostream>
 #include <vector>
 
-cv::Mat mycalculator(cv::Mat src);
+cv::Mat histogramRGBCalculator(cv::Mat src);
+cv::Mat hogVisualizationCalculator(cv::Mat src);
 
 #endif /* hogcalculator_hpp */
