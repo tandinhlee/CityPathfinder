@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -20,22 +20,32 @@
                         <subviews>
                             <mapView multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="VLh-NC-Aoa">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <animations/>
                                 <connections>
                                     <outlet property="delegate" destination="9pv-A4-QxB" id="9l2-sF-uMn"/>
                                 </connections>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8px-dz-jLp">
+                                <rect key="frame" x="508" y="513" width="72" height="30"/>
+                                <state key="normal" title="Locate Me"/>
+                                <connections>
+                                    <action selector="locateAction:" destination="9pv-A4-QxB" eventType="touchUpInside" id="bcB-DP-lN2"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="VLh-NC-Aoa" secondAttribute="trailing" id="0gJ-Dc-R0E"/>
                             <constraint firstItem="VLh-NC-Aoa" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="4OR-hg-A99"/>
+                            <constraint firstItem="8px-dz-jLp" firstAttribute="trailing" secondItem="tsR-hK-woN" secondAttribute="trailingMargin" id="7I8-oy-Mb6"/>
                             <constraint firstItem="VLh-NC-Aoa" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="top" id="Q8f-kD-gon"/>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="8px-dz-jLp" secondAttribute="bottom" constant="8" symbolic="YES" id="YUz-4N-p8f"/>
                             <constraint firstAttribute="bottom" secondItem="VLh-NC-Aoa" secondAttribute="bottom" id="oMy-OR-qzQ"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Maps" image="map" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="mapView" destination="VLh-NC-Aoa" id="3C0-qR-CES"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
@@ -55,7 +65,6 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="portrait_eyes_14.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="lEA-iX-AJI">
                                 <rect key="frame" x="11" y="20" width="578" height="249"/>
-                                <animations/>
                                 <accessibility key="accessibilityConfiguration">
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>
@@ -65,14 +74,12 @@
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wO3-ei-398">
                                 <rect key="frame" x="20" y="314" width="569" height="266"/>
-                                <animations/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" image="YES" allowsDirectInteraction="YES"/>
                                 </accessibility>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Wp-Dd-40E">
                                 <rect key="frame" x="20" y="277" width="53" height="30"/>
-                                <animations/>
                                 <state key="normal" title="Change"/>
                                 <connections>
                                     <action selector="changeImage:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="pYc-fu-6nP"/>
@@ -80,14 +87,12 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ou-Jw-PRf">
                                 <rect key="frame" x="549" y="277" width="40" height="30"/>
-                                <animations/>
                                 <state key="normal" title="Apply"/>
                                 <connections>
                                     <action selector="applyButtonTap:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="Mqv-at-fT6"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="wO3-ei-398" secondAttribute="bottom" constant="20" symbolic="YES" id="Fi7-SF-7JH"/>
@@ -121,7 +126,6 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                        <animations/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>

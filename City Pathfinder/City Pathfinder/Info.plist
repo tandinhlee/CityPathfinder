@@ -28,8 +28,13 @@
 	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
+		<string>accelerometer</string>
+		<string>location-services</string>
 		<string>armv7</string>
+		<string>gps</string>
 	</array>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Allow location-based actions to be triggered while in the background </string>
 	<key>UIStatusBarTintParameters</key>
 	<dict>
 		<key>UINavigationBar</key>
@@ -52,6 +57,11 @@
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>location</string>
+		<string>audio</string>
 	</array>
 </dict>
 </plist>

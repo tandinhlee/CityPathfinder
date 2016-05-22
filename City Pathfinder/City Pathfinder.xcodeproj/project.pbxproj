@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D3CB3F11CF1A6E400D7484C /* MyPlaceAnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3CB3F01CF1A6E400D7484C /* MyPlaceAnotation.swift */; };
 		0D74BE6F1BD15EDB00B9FBB7 /* hogcalculator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0D74BE6D1BD15EDB00B9FBB7 /* hogcalculator.cpp */; };
 		0DB500A41B98901E009A38D0 /* UIImage+OpenCV.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0DB500A31B98901E009A38D0 /* UIImage+OpenCV.mm */; };
 		0DB500AA1B98AF68009A38D0 /* CVWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0DB500A91B98AF68009A38D0 /* CVWrapper.mm */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D3CB3F01CF1A6E400D7484C /* MyPlaceAnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPlaceAnotation.swift; sourceTree = "<group>"; };
 		0D74BE6D1BD15EDB00B9FBB7 /* hogcalculator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hogcalculator.cpp; sourceTree = "<group>"; };
 		0D74BE6E1BD15EDB00B9FBB7 /* hogcalculator.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = hogcalculator.hpp; sourceTree = "<group>"; };
 		0DB500A11B98901D009A38D0 /* City Pathfinder-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "City Pathfinder-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -87,6 +89,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D3CB3EF1CF1A6E400D7484C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0D3CB3F01CF1A6E400D7484C /* MyPlaceAnotation.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		0D74BE6B1BD15E4500B9FBB7 /* ImageCalculations */ = {
 			isa = PBXGroup;
 			children = (
@@ -138,6 +148,7 @@
 		0DE10C6C1B94A57600A5519F /* City Pathfinder */ = {
 			isa = PBXGroup;
 			children = (
+				0D3CB3EF1CF1A6E400D7484C /* Models */,
 				0D74BE6B1BD15E4500B9FBB7 /* ImageCalculations */,
 				0DB500A51B98A8F6009A38D0 /* Images */,
 				0DB500A11B98901D009A38D0 /* City Pathfinder-Bridging-Header.h */,
@@ -233,7 +244,7 @@
 				TargetAttributes = {
 					0DE10C691B94A57600A5519F = {
 						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = 69328XU5T2;
+						DevelopmentTeam = QKX24FW9N8;
 					};
 					0DE10C7F1B94A57600A5519F = {
 						CreatedOnToolsVersion = 7.0;
@@ -289,6 +300,7 @@
 			files = (
 				0DE10C721B94A57600A5519F /* FunctionViewController.swift in Sources */,
 				0DE10C6E1B94A57600A5519F /* AppDelegate.swift in Sources */,
+				0D3CB3F11CF1A6E400D7484C /* MyPlaceAnotation.swift in Sources */,
 				0DB500AA1B98AF68009A38D0 /* CVWrapper.mm in Sources */,
 				0DB500A41B98901E009A38D0 /* UIImage+OpenCV.mm in Sources */,
 				0D74BE6F1BD15EDB00B9FBB7 /* hogcalculator.cpp in Sources */,
@@ -423,6 +435,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -431,8 +444,9 @@
 				INFOPLIST_FILE = "City Pathfinder/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "vn.ooops.City-Pathfinder";
+				PRODUCT_BUNDLE_IDENTIFIER = "vn.ufx.City-Pathfinder";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "City Pathfinder/City Pathfinder-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -444,6 +458,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -452,8 +467,9 @@
 				INFOPLIST_FILE = "City Pathfinder/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "vn.ooops.City-Pathfinder";
+				PRODUCT_BUNDLE_IDENTIFIER = "vn.ufx.City-Pathfinder";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "City Pathfinder/City Pathfinder-Bridging-Header.h";
 			};
 			name = Release;
