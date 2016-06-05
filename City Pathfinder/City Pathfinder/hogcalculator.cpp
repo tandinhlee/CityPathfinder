@@ -291,23 +291,10 @@ cv::Mat getGaborKernel ( double w, double theta, double sigma,
     
     return kernel;
 }
-const char* toJSON(std::vector<double> vector) {
-    std::ostringstream strs;
-    for (int i=0; i < vector.size(); i++) {
-        strs << vector[i];
-        if (i+1 < vector.size()) {
-            strs << ",";
-        }
-    }
-    const std::string& tmp = strs.str();
-    const char* cstr = tmp.c_str();
-    return cstr;
-}
-
-char* extractFeatureCalculator(cv::Mat src) {
-    char* result = nullptr;
+std::vector<double> extractFeatureCalculator(cv::Mat src) {
+    std::vector<double> vector;
     if( src.empty() )
-    { return result; }
+    { return vector; }
     cv::Mat img;
     cv::cvtColor(src, img, CV_RGB2GRAY);
     cv::resize(img, img, CvSize(IMG_RESIZE_WIDTH,IMG_RESIZE_HEIGHT),0,0,CV_INTER_LINEAR);
@@ -320,9 +307,7 @@ char* extractFeatureCalculator(cv::Mat src) {
         ,32.0/scaleFactor
         ,64.0/scaleFactor
     };
-    std::vector<double> vector;
     
-    int count  = 0;
     for (int l=0; l < w.size(); l++) {
         for (int t =0 ; t < theta.size(); t++) {
             char const *type = "event";
@@ -336,12 +321,11 @@ char* extractFeatureCalculator(cv::Mat src) {
             double mean = mean1.at(0);
             double std = std1.at(0);
             double variance = std*std;
-            vector[count] = round(mean);
-            vector[count+1] = round(variance);
-            count += 2;
+            vector.push_back(mean);
+            vector.push_back(variance);
         }
     }
-    return result;
+    return vector;
 }
 
 

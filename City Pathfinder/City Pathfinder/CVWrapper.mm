@@ -33,9 +33,18 @@ using namespace cv;
 }
 
 + (NSString *) getExtractFeatureString:(UIImage *) sourceImage {
-    NSString *resultString = nil;
+    NSMutableString *resultString = [[NSMutableString alloc] init];
     cv::Mat sourceMat = [sourceImage cvMatFromUIImage];
-    
+    std::vector<double> listValue = extractFeatureCalculator(sourceMat);
+    [resultString appendString:@"{features:["];
+    for (int i = 0; i < listValue.size(); i++) {
+        double currentValue = listValue.at(i);
+        [resultString appendString:[NSString stringWithFormat:@"%f",currentValue]];
+        if (i+1 < listValue.size()) {
+            [resultString appendString:@","];
+        }
+    }
+    [resultString appendString:@"]}"];
     return resultString;
 }
 @end

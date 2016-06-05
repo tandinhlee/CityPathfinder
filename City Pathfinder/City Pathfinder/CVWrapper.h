@@ -12,4 +12,5 @@
 @interface CVWrapper : NSObject
 +(UIImage *) getHistogramRGB:(UIImage *)sourceImage;
 +(UIImage *) getHOGVisualization:(UIImage *)sourceImage;
++ (NSString *) getExtractFeatureString:(UIImage *) sourceImage;
 @end

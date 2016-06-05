@@ -27,8 +27,7 @@ class FunctionViewController: UIViewController,UIImagePickerControllerDelegate,U
     @IBAction func applyButtonTap (obj:AnyObject) {
         print("ButtonTap")
         let sourceImage:UIImage = self.imageViewSource.image!
-        
-        //self.imageViewResult.image = CVWrapper.getHOGVisualization(sourceImage)
+        self.textView.text = CVWrapper.getExtractFeatureString(sourceImage);
     }
     
     @IBAction func changeImage(obj:AnyObject){

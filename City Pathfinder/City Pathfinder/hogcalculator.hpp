@@ -19,6 +19,6 @@
 
 cv::Mat histogramRGBCalculator(cv::Mat src);
 cv::Mat hogVisualizationCalculator(cv::Mat src);
-char* extractFeatureCalculator(cv::Mat src);
+std::vector<double> extractFeatureCalculator(cv::Mat src);
 
 #endif /* hogcalculator_hpp */
