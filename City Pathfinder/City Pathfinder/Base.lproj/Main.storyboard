@@ -72,12 +72,6 @@
                                     <constraint firstAttribute="height" constant="249" id="cYo-BO-ZUb"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wO3-ei-398">
-                                <rect key="frame" x="20" y="314" width="569" height="266"/>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" image="YES" allowsDirectInteraction="YES"/>
-                                </accessibility>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Wp-Dd-40E">
                                 <rect key="frame" x="20" y="277" width="53" height="30"/>
                                 <state key="normal" title="Change"/>
@@ -92,26 +86,33 @@
                                     <action selector="applyButtonTap:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="Mqv-at-fT6"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="mMa-Zk-WwW">
+                                <rect key="frame" x="11" y="315" width="569" height="228"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="wO3-ei-398" secondAttribute="bottom" constant="20" symbolic="YES" id="Fi7-SF-7JH"/>
+                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="mMa-Zk-WwW" secondAttribute="bottom" constant="8" symbolic="YES" id="GHe-Xd-gUZ"/>
                             <constraint firstItem="lEA-iX-AJI" firstAttribute="trailing" secondItem="6Ou-Jw-PRf" secondAttribute="trailing" id="GR0-aS-lWl"/>
-                            <constraint firstItem="wO3-ei-398" firstAttribute="top" secondItem="3Wp-Dd-40E" secondAttribute="bottom" constant="7" id="Ij2-N6-K34"/>
-                            <constraint firstItem="3Wp-Dd-40E" firstAttribute="leading" secondItem="wO3-ei-398" secondAttribute="leading" id="QQB-AT-39R"/>
-                            <constraint firstItem="wO3-ei-398" firstAttribute="trailing" secondItem="6Ou-Jw-PRf" secondAttribute="trailing" id="RrJ-fv-Mgb"/>
                             <constraint firstItem="lEA-iX-AJI" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="-9" id="WQf-cU-EWJ"/>
                             <constraint firstItem="6Ou-Jw-PRf" firstAttribute="baseline" secondItem="3Wp-Dd-40E" secondAttribute="baseline" id="aB4-g7-XpR"/>
                             <constraint firstItem="lEA-iX-AJI" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="dOI-VL-Qdy"/>
                             <constraint firstItem="3Wp-Dd-40E" firstAttribute="top" secondItem="lEA-iX-AJI" secondAttribute="bottom" constant="8" symbolic="YES" id="j2h-VN-aWH"/>
+                            <constraint firstItem="mMa-Zk-WwW" firstAttribute="leading" secondItem="lEA-iX-AJI" secondAttribute="leading" id="jer-IN-3V7"/>
+                            <constraint firstItem="mMa-Zk-WwW" firstAttribute="top" secondItem="3Wp-Dd-40E" secondAttribute="bottom" constant="8" symbolic="YES" id="m7S-Mu-2I1"/>
                             <constraint firstItem="lEA-iX-AJI" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" id="o2N-ce-Xli"/>
                             <constraint firstItem="3Wp-Dd-40E" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="wIT-HV-n4q"/>
+                            <constraint firstItem="mMa-Zk-WwW" firstAttribute="trailing" secondItem="QS5-Rx-YEW" secondAttribute="trailingMargin" id="zlv-9V-0gb"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Functions" image="function" id="cPa-gy-q4n"/>
                     <connections>
-                        <outlet property="imageViewResult" destination="wO3-ei-398" id="Ddp-Ib-kVa"/>
                         <outlet property="imageViewSource" destination="lEA-iX-AJI" id="ba3-tA-vOz"/>
+                        <outlet property="textView" destination="mMa-Zk-WwW" id="8YR-Hz-71t"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>

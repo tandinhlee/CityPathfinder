@@ -31,4 +31,11 @@ using namespace cv;
     resultImage = [UIImage UIImageFromCVMat:desMat];
     return resultImage;
 }
+
++ (NSString *) getExtractFeatureString:(UIImage *) sourceImage {
+    NSString *resultString = nil;
+    cv::Mat sourceMat = [sourceImage cvMatFromUIImage];
+    
+    return resultString;
+}
 @end

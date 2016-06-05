@@ -11,7 +11,8 @@ import UIKit
 class FunctionViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate,UIGestureRecognizerDelegate {
     
     @IBOutlet weak var imageViewSource : UIImageView!
-    @IBOutlet weak var imageViewResult : UIImageView!
+    
+    @IBOutlet weak var textView: UITextView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +27,8 @@ class FunctionViewController: UIViewController,UIImagePickerControllerDelegate,U
     @IBAction func applyButtonTap (obj:AnyObject) {
         print("ButtonTap")
         let sourceImage:UIImage = self.imageViewSource.image!
-        self.imageViewResult.image = CVWrapper.getHOGVisualization(sourceImage)
+        
+        //self.imageViewResult.image = CVWrapper.getHOGVisualization(sourceImage)
     }
     
     @IBAction func changeImage(obj:AnyObject){

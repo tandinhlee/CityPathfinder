@@ -6,6 +6,12 @@
 //  Copyright © 2015 Dinh Le. All rights reserved.
 //
 #include "hogcalculator.hpp"
+#include <array>
+#include <strstream>
+#define KERNEL_SIZE 31
+#define IMG_RESIZE_WIDTH 320
+#define IMG_RESIZE_HEIGHT 180
+#define ROUND_DIGITS 5
 cv::Mat histogramRGBCalculator(cv::Mat src)
 {
     cv::Mat dst;
@@ -244,6 +250,98 @@ cv::Mat hogVisualizationCalculator(cv::Mat src){
     cv::Mat dst;
     dst = get_hogdescriptor_visual_image(img, descriptorsValues,cv::Size(img.cols,img.rows),cellSize, scaleFactor, viz_factor);
     return dst;
+}
+
+cv::Mat getGaborKernel ( double w, double theta, double sigma,
+                        int filterSize, char const *filterType ) {
+    
+    cv::Mat kernel  = cv::Mat(filterSize,filterSize, CV_32F);
+    double xr = -std::floor(filterSize/2.0)/filterSize;
+    double yr = -xr;
+    double step = 1.0/filterSize;
+    double xrTemp, yrTemp;
+    double rotation;
+    double bandpass;
+    double filterRadius = std::floor(filterSize / 2.0);
+    double xg, yg, k, gauss;
+    double sigmaScale = sigma * (filterSize / 2.0);
+    double A = 1 / (2 * M_PI * sigmaScale * sigmaScale);
+    for (int row  = 0; row < filterSize; row++){
+        yrTemp = yr - row * step;
+        for (int col = 0; col < filterSize; col++){
+            xrTemp = xr + col * step;
+            rotation = xrTemp * std::cos(theta) + yrTemp * std::sin(theta);
+            
+            if (std::strcmp(filterType, "even")){
+                bandpass = std::cos(2 * M_PI * w * rotation);
+            }
+            else{
+                bandpass = std::sin(2 * M_PI * w * rotation);
+            }
+            
+            xg = filterRadius + row;
+            yg = - filterRadius - col;
+            
+            k = -1 * (( xg * xg + yg * yg) / (2 * sigmaScale * sigmaScale));
+            gauss = A * std::exp(k);
+            kernel.at<float>(row,col) = gauss*bandpass;
+        
+        }
+    }
+    
+    return kernel;
+}
+const char* toJSON(std::vector<double> vector) {
+    std::ostringstream strs;
+    for (int i=0; i < vector.size(); i++) {
+        strs << vector[i];
+        if (i+1 < vector.size()) {
+            strs << ",";
+        }
+    }
+    const std::string& tmp = strs.str();
+    const char* cstr = tmp.c_str();
+    return cstr;
+}
+
+char* extractFeatureCalculator(cv::Mat src) {
+    char* result = nullptr;
+    if( src.empty() )
+    { return result; }
+    cv::Mat img;
+    cv::cvtColor(src, img, CV_RGB2GRAY);
+    cv::resize(img, img, CvSize(IMG_RESIZE_WIDTH,IMG_RESIZE_HEIGHT),0,0,CV_INTER_LINEAR);
+    std::array<double,4> theta{0,M_PI_4,M_PI_2,(3*M_PI)/4};
+    double scaleFactor = IMG_RESIZE_WIDTH / KERNEL_SIZE;
+    std::array<double,5> w {
+        2.0/scaleFactor
+        ,8.0/scaleFactor
+        ,16.0/scaleFactor
+        ,32.0/scaleFactor
+        ,64.0/scaleFactor
+    };
+    std::vector<double> vector;
+    
+    int count  = 0;
+    for (int l=0; l < w.size(); l++) {
+        for (int t =0 ; t < theta.size(); t++) {
+            char const *type = "event";
+            cv::Mat gaborKernel = getGaborKernel(w[l],theta[t],1/w[l],KERNEL_SIZE,type);
+            cv::Mat imgAtKernel = img.clone();
+            imgAtKernel.convertTo(imgAtKernel, CV_32F);
+            cv::filter2D(imgAtKernel, imgAtKernel, CV_32F, gaborKernel , cv::Point(-1,-1),0,cv::BORDER_REFLECT);
+            std::vector<double> mean1;
+            std::vector<double> std1;
+            cv::meanStdDev(imgAtKernel, mean1, std1);
+            double mean = mean1.at(0);
+            double std = std1.at(0);
+            double variance = std*std;
+            vector[count] = round(mean);
+            vector[count+1] = round(variance);
+            count += 2;
+        }
+    }
+    return result;
 }
 
 
